@@ -18,3 +18,12 @@ Route::get('/segitiga/alas/{alas?}/tinggi/{tinggi?}', function ($alas = 1, $ting
     $luas = 0.5*$alas*$tinggi;
     return "Luas Segitiga :".$luas;
 });
+
+Route::prefix('jurusan')->group(function () {
+    Route::get('/kelas/{namaKelas}', function ($namaKelas) {
+        return $namaKelas;
+    });
+    Route::get('/walikelas/{nama}', function ($nama) {
+        return $nama;
+    });
+});
