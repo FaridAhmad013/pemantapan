@@ -38,5 +38,9 @@ Route::get('/profile', function () {
 });
 
 Route::get('/album', function () {
+    return view('album');
+})->name('album');
+
+Route::get('/', function () {
     return view('index');
 });
